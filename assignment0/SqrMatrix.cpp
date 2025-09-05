@@ -16,6 +16,7 @@ SqrMatrix::SqrMatrix(int N) {
     sq = nullptr;
 }
 
+//Print all elements of matrix when "cout <<" is called on this object;
 std::ostream& operator << (std::ostream& out, const SqrMatrix* matrix){
     //check sq for successful allocation
     if (matrix->sq != nullptr) {
@@ -42,6 +43,7 @@ std::ostream& operator << (std::ostream& out, const SqrMatrix* matrix){
     return out;
 }
 
+//Take the input of all elements when "cin >>" is called on this object
 std::istream& operator >> (std::istream& in, SqrMatrix* matrix){
     //dynamically creating the 2D matrix
     matrix-> sq = new int* [matrix->size];
@@ -60,6 +62,7 @@ std::istream& operator >> (std::istream& in, SqrMatrix* matrix){
     return in;
 }
 
+//Perform Matrix multiplication when "*" is used to multiply two of these objects toogether
 SqrMatrix* SqrMatrix::operator * ( SqrMatrix* const smPtrB){
     //initialize result matrix
     auto* result = new SqrMatrix(size);
@@ -71,7 +74,14 @@ SqrMatrix* SqrMatrix::operator * ( SqrMatrix* const smPtrB){
     }
 
 
-
+    /**
+     *outer loop(i) = for every row in 'result's' array
+     *inner loop(j) = for every row in 'this' array (columns for smPtrB)
+     *second inner loop(k) = for every column in 'this' array (rows for smPtrB)
+     *
+     *Multiply each cell together from 'this' and 'smPtrB', and add the results
+     *Store that in result->sq[i][j]
+    **/
     for (int i=0; i < size; ++i) {
         for (int j=0; j< size; ++j) {
           for (int k=0; k< size; ++k) {
@@ -82,14 +92,15 @@ SqrMatrix* SqrMatrix::operator * ( SqrMatrix* const smPtrB){
 
     return result;
 }
-
+//get an element in the matrix
 int SqrMatrix::getElement(int i, int j){
-    return 0;
+    return this->sq[i][j];
 }
 
+//replace an element in the matrix
 void SqrMatrix::putElement(int val, int i, int j){
+    this->sq[i][j] = val;
 }
 
-//make allocated memory destruct when out of scope
 
 

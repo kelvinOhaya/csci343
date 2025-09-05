@@ -46,17 +46,17 @@ public:
     SqrMatrix* operator * ( SqrMatrix* smPtrB);
 
     /**
-     * Description: //TODO Fill out what this description is
-     * @param i //TODO Fill out what this param is
-     * @return j //TODO Fill out what this
+     * Description: //Get the element at the desired row and column
+     * @param i //The desired row
+     * @return j //The desired column
      */
     int getElement(int i, int j);
 
     /**
-     * Description: //TODO Fill out what this description is
-     * @param val //TODO Fill out what this param is
-     * @param i //TODO Fill out what this param is
-     * @return j //TODO Fill out what this
+     * Description: //Change the element at the desired row and column
+     * @param val //Value which will replace the chosen cell
+     * @param i //The desired row
+     * @return j //The desired column
      */
     void putElement(int val, int i, int j);
 
