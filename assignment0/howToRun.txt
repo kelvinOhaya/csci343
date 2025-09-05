@@ -1,0 +1,3 @@
+How to run:
+
+-Inside cmake-build-debug, open matrixMultiplier.exe
