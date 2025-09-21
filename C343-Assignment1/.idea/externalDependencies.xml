@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalDependencies">
+    <plugin id="GrepConsole" />
+    <plugin id="String Manipulation" />
+    <plugin id="artsiomch.cmake" />
+    <plugin id="com.andrey4623.rainbowcsv" />
+    <plugin id="intellij.prettierJS" />
+    <plugin id="io.ringle.ij.cmakedocs" />
+    <plugin id="izhangzhihao.rainbow.brackets" />
+    <plugin id="mobi.hsz.idea.gitignore" />
+    <plugin id="net.seesharpsoft.intellij.plugins.csv" />
+    <plugin id="org.asciidoctor.intellij.asciidoc" />
+    <plugin id="ru.adelf.idea.dotenv" />
+  </component>
+</project>

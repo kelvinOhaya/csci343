@@ -1,0 +1,35 @@
+name: CMake Build CI
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Install Packages
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y automake gcc gdb cmake make automake doxygen valgrind \
+            build-essential libssl-dev g++ ninja-build apt-transport-https software-properties-common \
+            unattended-upgrades cmake-doc doxygen-doc gdb-doc gdbserver \
+            libssl-doc xapian-tools valgrind-dbg valgrind-mpi kcachegrind 
+
+      - name: Get latest CMake and ninja
+        uses: lukka/get-cmake@latest
+
+      - name: Build project
+        shell: sh
+        run: |
+          mkdir cmake-build-debug
+          echo "Run Build"
+          cd ./cmake-build-debug
+          cmake .. 
+
+      - name: Test and Create Docs
+        shell: sh
+        run: |
+          cd ./cmake-build-debug
+          cmake --build ./ --target all
+          ctest .
