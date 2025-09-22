@@ -20,6 +20,11 @@ namespace {
 
     }
 
+    TEST(Sequence_Length, Empty_Sequence_Case) {
+        auto seq = std::make_unique<Sequence<std::string>>();
+        EXPECT_EQ(0, seq->length());
+    }
+
     TEST(Sequence_Length, Test1_String) {
         //Setup
         auto seq = std::make_unique<Sequence<std::string>>();

@@ -110,6 +110,7 @@ public:
 
 
 
+
     /**
   * Description: Transfer elements from one sequence to another
   * @param source Sequence to get elements from
@@ -124,6 +125,7 @@ public:
     Sequence& operator=(Sequence const& rhs);
 
 };
+
 
 
 #endif

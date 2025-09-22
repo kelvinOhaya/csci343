@@ -34,5 +34,17 @@ namespace {
         //Test
         EXPECT_EQ("dog", seq->entry(0));
     }
+    TEST(Sequence_Remove, Test1_Bool) {
+        //Setup
+        auto seq = std::make_unique<Sequence<bool>>();
+        bool value = false;
+        bool value2 = true;
+        //Process
+        seq->add(value, 0);
+        seq->add(value2, 1);
+        seq->remove(value, 0);
+        //Test
+        EXPECT_EQ(1, seq->entry(0));
+    }
 
 }

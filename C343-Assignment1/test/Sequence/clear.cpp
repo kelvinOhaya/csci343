@@ -33,5 +33,18 @@ namespace {
         EXPECT_EQ(0,seq->length());
     }
 
+    TEST(Sequence_Clear, Test1_Bool) {
+        //Setup
+        auto seq = std::make_unique<Sequence<bool>>();
+        bool value = false;
+        bool value2 = true;
+        //Process
+        seq->add(value, 0);
+        seq->add(value2, 1);
+        seq->clear();
+        //Test
+        EXPECT_EQ(0,seq->length());
+    }
+
 }
 

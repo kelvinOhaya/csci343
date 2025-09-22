@@ -42,4 +42,15 @@ namespace {
         EXPECT_EQ("fish, sun, cat, dog", seq->outputSequence());
     }
 
+    TEST(Sequence_Operator, Boolean_Case) {
+        auto seq = std::make_unique<Sequence<bool>>();
+        bool value = false;
+        bool value2 = true;
+        //Process
+        seq->add(value, 0);
+        seq->add(value2, 1);
+        //Test
+        EXPECT_EQ("0, 1", seq->outputSequence());
+    }
+
 }

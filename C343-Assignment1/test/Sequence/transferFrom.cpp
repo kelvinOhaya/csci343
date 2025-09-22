@@ -93,5 +93,11 @@ namespace {
         EXPECT_EQ("purple, red", seq2->outputSequence());
 
     }
+    TEST(Sequence_TransferFrom, Test4_Empty_Case) {
+        auto seq = std::make_unique<Sequence<std::string>>();
+        auto seq2 = std::make_unique<Sequence<std::string>>();
+        seq2->transferFrom(*seq);
+        EXPECT_EQ("", seq2->outputSequence());
+    }
 
 }

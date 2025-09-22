@@ -45,16 +45,14 @@ void Sequence<T>::reclaimAllNodes (NodeRecord*& initialP)
 template <class T>
 void Sequence<T>::transferFrom(Sequence& source)
 {
-    std::optional<T> temp;
+    if (this==&source) return;
+    NodeRecord* temp;
     clear(); //clears self
-    for (int i = 0; i < source.length(); i++)//traverses source
-    {
-        temp = source.entry(i);
-        if(temp != std::nullopt) {
-            add(temp.value(), length());//adds source elements to self
-        }
-    }
-    source.clear();//clears source
+    head = source.head;
+    size = source.size;
+    source.head = nullptr;
+    source.head = nullptr;
+    source.size = 0;
 }
 
 template <class T>
@@ -92,15 +90,22 @@ void Sequence<T>::add(T &x, int pos) {
 
 template<class T>
 void Sequence<T>::remove(T &x, int pos) {
-    /*General Steps
-     *  Make the node behind x point where x.next is pointing
-     *  Delete ts node from memory
-     */
-    //find the element before pos and make it point to the element x is pointing tp
-    // auto prevElemPointer = getElementAt(--pos);
-    // prevElemPointer->next = x.next;
-    // //delete x
-    // x = getElementAt(pos);
+    if (pos < 0 || pos > size) {
+        throw std::invalid_argument("Error: pos is out of scope");
+    }
+    //find the element before pos and make it point to the element x is pointing to
+    if (pos > 0) {
+        NodeRecord* prevElemPointer = getElementAt(--pos);
+        NodeRecord* currElemPtr = getElementAt(pos);
+        prevElemPointer->next = currElemPtr->next;
+        delete currElemPtr;
+    } else {
+        //pos == 0, meaning there is no previous element
+        NodeRecord* nextElemPointer = getElementAt(++pos);
+        delete head;//delete the node head is pointing to
+        head = nextElemPointer;//make head point to element in front of it
+    }
+
 }
 
 template<class T>
@@ -157,9 +162,12 @@ int Sequence<T>::length() {
 template<class T>
 std::string Sequence<T>::outputSequence() {
     std::stringstream ss;
-
+    NodeRecord* currentValue = head;
+    for (int i = 0; i < size; i++) {
+        ss << currentValue->value << (i == (size-1)?"": ", ");
+        currentValue = currentValue->next;
+    }
     //Use insertion operator (<<) to build the string.
     return ss.str();
-
 }
 
