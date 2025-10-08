@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/Kohay/OneDrive/Documents/SCHOOLWORK/fa25/c343/Kelvin Ohaya - C343 Assignment2/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/Kelvin_Ohaya___C343_Assignment2.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\Kelvin_Ohaya___C343_Assignment2.dir\\EmployeeRecordShortVersion\\ExampleFileReader.cpp.obj -c \"C:\\Users\\Kohay\\OneDrive\\Documents\\SCHOOLWORK\\fa25\\c343\\Kelvin Ohaya - C343 Assignment2\\EmployeeRecordShortVersion\\ExampleFileReader.cpp\"",
+  "file": "C:/Users/Kohay/OneDrive/Documents/SCHOOLWORK/fa25/c343/Kelvin Ohaya - C343 Assignment2/EmployeeRecordShortVersion/ExampleFileReader.cpp",
+  "output": "CMakeFiles/Kelvin_Ohaya___C343_Assignment2.dir/EmployeeRecordShortVersion/ExampleFileReader.cpp.obj"
+}
+]

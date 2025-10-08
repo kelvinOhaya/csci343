@@ -1,0 +1,3 @@
+C:/Users/Kohay/OneDrive/Documents/SCHOOLWORK/fa25/c343/Kelvin Ohaya - C343 Assignment2/build/CMakeFiles/Kelvin_Ohaya___C343_Assignment2.dir
+C:/Users/Kohay/OneDrive/Documents/SCHOOLWORK/fa25/c343/Kelvin Ohaya - C343 Assignment2/build/CMakeFiles/edit_cache.dir
+C:/Users/Kohay/OneDrive/Documents/SCHOOLWORK/fa25/c343/Kelvin Ohaya - C343 Assignment2/build/CMakeFiles/rebuild_cache.dir

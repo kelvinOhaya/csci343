@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Kelvin_Ohaya___C343_Assignment2",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Kelvin_Ohaya___C343_Assignment2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Kelvin_Ohaya___C343_Assignment2-Debug-06da5575d6ecc451f838.json",
+					"name" : "Kelvin_Ohaya___C343_Assignment2",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Kohay/OneDrive/Documents/SCHOOLWORK/fa25/c343/Kelvin Ohaya - C343 Assignment2/build",
+		"source" : "C:/Users/Kohay/OneDrive/Documents/SCHOOLWORK/fa25/c343/Kelvin Ohaya - C343 Assignment2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}
