@@ -9,7 +9,7 @@
 #include <vector>
 #include <memory>
 #include <cctype>
-#include "../../Kelvin Ohaya - C343-Assignment1/src/Sequence/Sequence.h"
+#include "Sequence.h"
 #include "EmployeeRecord.h"
 
 typedef Sequence<EmployeeRecord> EmployeeSequence;
@@ -227,7 +227,7 @@ void doInputPersonDataFromFile(EmployeeSequence &personData, EmployeeRecords &po
             pointerVector.push_back(std::move(heapRec));
             ++count;
         }
-        cout << "Number of Records read (TSV): " << count << endl;
+        cout << "Number of Records read: " << count << endl;
     }
 } // doInputPersonDataFromFile>
 
