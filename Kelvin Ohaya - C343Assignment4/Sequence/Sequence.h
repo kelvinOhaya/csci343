@@ -112,14 +112,14 @@ public:
      * @param pos index in sequence representing location of node
      * @return value from given position
      */
-    std::optional<T> entry (int pos) const;
+    std::optional<T> entry (int pos, int* counter = nullptr) const;
 
     /**
      *Description: Gets pointer to object at pos
      *@param pos index in sequence representing location of node
      *@return pointer to node from pos or nullptr if out of bounds
      */
-    NodeRecord* getElementAt(int pos) const;
+    NodeRecord* getElementAt(int pos, int* counter = nullptr) const;
 
 
     /**
@@ -194,7 +194,6 @@ void Sequence<T>::clear ()
 template <class T>
 void Sequence<T>::reclaimAllNodes (NodeRecord*& p)
 {
-    // iterative delete to avoid deep recursion; set p to nullptr for safety
     NodeRecord* cur = p;
     while (cur != nullptr) {
         NodeRecord* nxt = cur->next;
@@ -301,21 +300,22 @@ void Sequence<T>::remove(T &x, int pos) {
 }
 
 template<class T>
-std::optional<T> Sequence<T>::entry(int pos) const {
+std::optional<T> Sequence<T>::entry(int pos, int *counter) const {
     if (pos < 0 || pos >= size) {
         return std::nullopt;
     }
-    NodeRecord* cur = getElementAt(pos);
+    NodeRecord* cur = getElementAt(pos, counter);
     if (cur == nullptr) return std::nullopt;
     return cur->value;
 }
 
 template<class T>
-typename Sequence<T>::NodeRecord* Sequence<T>::getElementAt(int pos) const {
+typename Sequence<T>::NodeRecord* Sequence<T>::getElementAt(int pos, int *counter) const {
     if (pos < 0 || pos >= size) return nullptr;
     NodeRecord* cur = head;
     for (int i = 0; i < pos; ++i) {
         cur = cur->next;
+        if (counter) ++(*counter);
     }
     return cur;
 }

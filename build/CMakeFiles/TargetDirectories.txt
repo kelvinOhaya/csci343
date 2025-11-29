@@ -1,0 +1,3 @@
+/workspaces/csci343/build/CMakeFiles/spellChecker.dir
+/workspaces/csci343/build/CMakeFiles/edit_cache.dir
+/workspaces/csci343/build/CMakeFiles/rebuild_cache.dir

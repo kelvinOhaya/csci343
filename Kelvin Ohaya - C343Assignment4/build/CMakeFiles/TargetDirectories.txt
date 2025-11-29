@@ -1,0 +1,3 @@
+/workspaces/csci343/Kelvin Ohaya - C343Assignment4/build/CMakeFiles/spellChecker.dir
+/workspaces/csci343/Kelvin Ohaya - C343Assignment4/build/CMakeFiles/edit_cache.dir
+/workspaces/csci343/Kelvin Ohaya - C343Assignment4/build/CMakeFiles/rebuild_cache.dir

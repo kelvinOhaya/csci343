@@ -1,0 +1,1 @@
+/usr/bin/clang++ -g CMakeFiles/spellChecker.dir/Sequence/Sequence.cpp.o CMakeFiles/spellChecker.dir/main.cpp.o CMakeFiles/spellChecker.dir/utils/utils.cpp.o -o spellChecker 

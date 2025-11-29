@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/workspaces/csci343/build",
+  "command": "/usr/bin/clang++  -I\"/workspaces/csci343/Kelvin Ohaya - C343Assignment4\" -g -std=gnu++17 -Wall -Wextra -Wpedantic -o CMakeFiles/spellChecker.dir/Sequence/Sequence.cpp.o -c \"/workspaces/csci343/Kelvin Ohaya - C343Assignment4/Sequence/Sequence.cpp\"",
+  "file": "/workspaces/csci343/Kelvin Ohaya - C343Assignment4/Sequence/Sequence.cpp",
+  "output": "CMakeFiles/spellChecker.dir/Sequence/Sequence.cpp.o"
+},
+{
+  "directory": "/workspaces/csci343/build",
+  "command": "/usr/bin/clang++  -I\"/workspaces/csci343/Kelvin Ohaya - C343Assignment4\" -g -std=gnu++17 -Wall -Wextra -Wpedantic -o CMakeFiles/spellChecker.dir/main.cpp.o -c \"/workspaces/csci343/Kelvin Ohaya - C343Assignment4/main.cpp\"",
+  "file": "/workspaces/csci343/Kelvin Ohaya - C343Assignment4/main.cpp",
+  "output": "CMakeFiles/spellChecker.dir/main.cpp.o"
+},
+{
+  "directory": "/workspaces/csci343/build",
+  "command": "/usr/bin/clang++  -I\"/workspaces/csci343/Kelvin Ohaya - C343Assignment4\" -g -std=gnu++17 -Wall -Wextra -Wpedantic -o CMakeFiles/spellChecker.dir/utils/utils.cpp.o -c \"/workspaces/csci343/Kelvin Ohaya - C343Assignment4/utils/utils.cpp\"",
+  "file": "/workspaces/csci343/Kelvin Ohaya - C343Assignment4/utils/utils.cpp",
+  "output": "CMakeFiles/spellChecker.dir/utils/utils.cpp.o"
+}
+]
