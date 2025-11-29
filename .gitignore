@@ -6,3 +6,10 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+# Local history for IDEs
+/.idea/localHistory/
+# VS Code settings
+.vscode/settings.json
+/*.vscode/*
+# MacOS system files
+.DS_Store
